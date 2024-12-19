@@ -10,7 +10,29 @@ body {
   scroll-behavior: smooth;
   direction: rtl;
 }
+/* -------------------------------------------------------------------------------------------------- */
 
+.sidebar {
+  display: none; /* يخفي الخط الجانبي تمامًا */
+}
+
+.main-content {
+  width: 100%; /* يجعل المحتوى الرئيسي يمتد ليملأ الشاشة بالكامل */
+}
+
+.container {
+  display: flex; /* إذا كنت تستخدم Flexbox */
+}
+
+.sidebar {
+  display: none; /* إخفاء الخط الجانبي */
+}
+
+.main-content {
+  flex: 1; /* يجعل المحتوى الرئيسي يشغل كل المساحة المتاحة */
+}
+
+/* -------------------------------------------------------------------------------------------------- */
 .header {
   background-image: url(Elements/Background/bk\ -\ h&f.png);
   background-size: cover;
@@ -209,7 +231,7 @@ body {
 .menuElements {
   display: none;
   position: absolute;
-  top: 18vh;
+  top: 15vh;
   left: 0;
   width: 100%;
   background-color: white;
@@ -316,6 +338,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    height: 15vh;
   }
 
   .header img {
@@ -482,6 +505,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    height: 15vh;
   }
 
   .header img {
