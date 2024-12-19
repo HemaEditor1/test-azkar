@@ -20,18 +20,6 @@ body {
   width: 100%; /* يجعل المحتوى الرئيسي يمتد ليملأ الشاشة بالكامل */
 }
 
-.container {
-  display: flex; /* إذا كنت تستخدم Flexbox */
-}
-
-.sidebar {
-  display: none; /* إخفاء الخط الجانبي */
-}
-
-.main-content {
-  flex: 1; /* يجعل المحتوى الرئيسي يشغل كل المساحة المتاحة */
-}
-
 /* -------------------------------------------------------------------------------------------------- */
 .header {
   background-image: url(Elements/Background/bk\ -\ h&f.png);
@@ -246,6 +234,7 @@ body {
 
 .menuElements.show {
   transform: translateX(0);
+  width: 100%;
 }
 
 .menuElements a {
