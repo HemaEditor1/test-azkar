@@ -1,0 +1,609 @@
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Zain", sans-serif;
+  scroll-behavior: smooth;
+  direction: rtl;
+}
+
+.header {
+  background-image: url(Elements/Background/bk\ -\ h&f.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.desktopHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 4vh 8vh;
+  overflow: hidden;
+}
+
+.header img {
+  width: 7rem;
+  margin-right: 15px;
+  /* margin: 5vh; */
+  /* margin-right: 15vh; */
+}
+
+.linksMoreZekr {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.linksMoreZekr a {
+  display: flex;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  height: 1.1rem;
+  padding: 1rem;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+  flex-direction: column;
+}
+
+.linksMoreZekr a:hover {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+/* ---------------------------------------------- */
+
+.text {
+  position: relative;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.7rem;
+  margin-top: 2rem;
+}
+
+.text h4 {
+  margin-top: -2vh;
+  font-family: "Amiri", serif;
+  font-weight: 500;
+}
+
+.text h5 {
+  margin-top: 1vh;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* ---------------------------------------------- */
+
+.secName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.secName h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 10vh;
+}
+
+.secName h3 {
+  margin-top: -3vh;
+  font-weight: 500;
+}
+
+.box {
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 80vh;
+  width: 90%;
+  margin: -1vh;
+  margin-bottom: 10vh;
+  background-image: url(Elements/Background/bk\ -\ box.png);
+  font-size: 1.3rem;
+}
+
+.zekr {
+  margin: 0vh 10vh;
+}
+
+.zekr h4 {
+  font-size: 1.2rem;
+}
+
+.zekr h1 {
+  margin-top: -2vh;
+  font-size: 3.5rem;
+}
+
+.zekr h2 {
+  font-size: 2.5rem;
+  margin-top: -2vh;
+}
+
+.srcZekr {
+  margin-top: 3vh;
+  margin-bottom: -5vh;
+  position: relative;
+}
+
+.infoBtn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  position: absolute; /* لجعل الزر فوق النص */
+  top: 2vh; /* تحديد موقع الزر */
+  right: 50%; /* لجعل الزر في المنتصف أفقيًا */
+  transform: translateX(50%); /* لضبط التمركز بدقة */
+  z-index: 2; /* تأكيد أن الزر يظهر فوق النص */
+}
+
+.infoBtn.deactive {
+  top: 2vh;
+  opacity: 0;
+  transform: rotateY(90deg);
+  transition: 0.5s ease;
+}
+
+.sourceHidden {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+  transform: rotateY(90deg);
+  z-index: 1; /* جعل النص أسفل الزر */
+  margin-top: 1vh;
+  font-weight: 400;
+  letter-spacing: 0.7px;
+}
+
+.sourceHidden.active {
+  opacity: 1;
+  transform: rotateY(0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.doneBtn.deactive {
+  opacity: 0;
+  transition: 0.4s ease;
+  /* transform: rotateY(90deg); */
+  transform: translateY(-50px);
+}
+
+.doneBtn {
+  opacity: 1;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: white;
+  margin-top: 0.5rem;
+  transition: 0.4s ease;
+  /* transform: rotateY(0deg); */
+  transform: translateY(0px);
+}
+
+/* -------------------------------------------------------------------------------- menu */
+
+.menuElements {
+  display: none;
+  position: absolute;
+  top: 18vh;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  transform: translateX(-200%);
+  transition: 0.3s ease;
+}
+
+.menuElements.show {
+  transform: translateX(0);
+}
+
+.menuElements a {
+  text-decoration: none;
+  font-weight: 800;
+  color: #256358;
+  display: block; /* عرض الروابط كعناصر فردية */
+  padding: 15px;
+  transition: 0.3s ease;
+}
+
+.menuElements a:hover {
+  background-color: #256358;
+  color: white;
+}
+
+.menu {
+  display: none;
+}
+
+.menuX {
+  display: none;
+  margin: 0;
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+.menuX a {
+  color: white;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+}
+
+.menuX.show {
+  display: block;
+}
+
+/* -------------------------------------------- */
+
+/* Small Phones */
+@media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .desktopHeader {
+    display: none;
+  }
+
+  .logoImgPhone {
+    display: block;
+  }
+
+  .menuElements {
+    display: block;
+  }
+
+  .linksMoreZekr {
+    display: none;
+  }
+
+  .header img {
+    width: 18%;
+    margin: 5vh;
+  }
+
+  .menu {
+    margin: 0;
+    padding: 0 20px;
+    font-size: 18px;
+    display: block;
+  }
+
+  .menu.close {
+    display: none;
+  }
+
+  .menu a {
+    color: white;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+  }
+
+  /* ------------------------------------------------- */
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header img {
+    height: 7vh;
+    width: auto;
+  }
+
+  .text {
+    position: relative;
+    width: 90%;
+  }
+
+  .text h4 {
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+
+  .text h5 {
+    font-weight: 700;
+    margin-top: -3vh;
+    margin-bottom: 3.5vh;
+    font-size: 0.66rem;
+  }
+
+  .smlNum {
+    width: 110px;
+    height: 60px;
+    font-size: 1rem;
+  }
+
+  .smlNum.deactive {
+    width: 90px;
+    height: 55px;
+    font-size: 0.7rem;
+  }
+
+  span {
+    font-size: 1.9rem;
+  }
+
+  /* ------------------------------ */
+
+  .srcZekr {
+    position: relative;
+  }
+
+  .infoBtn {
+    font-size: 1.3rem;
+  }
+
+  .sourceHidden {
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+
+  .sourceHidden.active {
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+
+  .doneBtn {
+    font-size: 1rem;
+  }
+
+  /* ------------------------------ */
+
+  .secName h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 10vh;
+  }
+
+  .secName h3 {
+    margin-top: -5vh;
+    margin-bottom: 1vh;
+    font-weight: 500;
+  }
+
+  .box {
+    height: 500px;
+    width: 330px;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 8vh;
+  }
+
+  .box h2 {
+    font-size: 1.5rem;
+  }
+
+  .zekr h4 {
+    font-size: 1rem;
+  }
+
+  .zekr h1 {
+    margin-top: -2vh;
+    font-size: 3rem;
+  }
+
+  .zekr h2 {
+    font-size: 2rem;
+    margin-top: -2vh;
+  }
+
+  .textBFooter h4 {
+    font-size: 1rem;
+  }
+
+  .footer h2 {
+    font-size: 1rem;
+  }
+
+  .footer h3 {
+    font-size: 0.8rem;
+  }
+}
+
+/* Tablets */
+
+@media (max-width: 768px) and (min-width: 481px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .linksMoreZekr {
+    display: none;
+  }
+
+  .header img {
+    width: 18%;
+    margin: 5vh;
+  }
+
+  .menuElements {
+    display: block;
+  }
+
+  .desktopHeader {
+    display: none;
+  }
+
+  .menu {
+    margin: 0;
+    padding: 0 20px;
+    font-size: 18px;
+    display: block;
+  }
+
+  .menu.close {
+    display: none;
+  }
+
+  .menu a {
+    color: white;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+  }
+
+  /* ------------------------------------------------- */
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header img {
+    height: 7vh;
+    width: auto;
+  }
+
+  .text {
+    position: relative;
+    width: 90%;
+  }
+
+  .text h4 {
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+
+  .text h5 {
+    font-weight: 700;
+    margin-top: -3vh;
+    margin-bottom: 3.5vh;
+    font-size: 0.66rem;
+  }
+
+  .smlNum {
+    width: 110px;
+    height: 60px;
+    font-size: 1rem;
+  }
+
+  .smlNum.deactive {
+    width: 90px;
+    height: 55px;
+    font-size: 0.7rem;
+  }
+
+  span {
+    font-size: 1.9rem;
+  }
+
+  /* ------------------------------ */
+
+  .srcZekr {
+    position: relative;
+  }
+
+  .infoBtn {
+    font-size: 1.5rem;
+  }
+
+  .sourceHidden {
+    margin-top: 1vh;
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin: 6vh;
+  }
+
+  .sourceHidden.active {
+    margin-top: 1vh;
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin: 6vh;
+  }
+
+  .doneBtn {
+    font-size: 1rem;
+  }
+
+  /* ------------------------------ */
+
+  .secName h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .secName h3 {
+    margin-top: -5vh;
+    margin-bottom: 1vh;
+    font-weight: 500;
+  }
+
+  .box {
+    height: 570px;
+    width: 410px;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 8vh;
+  }
+
+  .box h2 {
+    font-size: 1.5rem;
+  }
+
+  .zekr h4 {
+    font-size: 1rem;
+  }
+
+  .zekr h1 {
+    margin-top: -2vh;
+    font-size: 3rem;
+  }
+
+  .zekr h2 {
+    font-size: 2rem;
+    margin-top: -2vh;
+  }
+
+  .textBFooter h4 {
+    font-size: 1rem;
+  }
+
+  .footer h2 {
+    font-size: 1rem;
+  }
+
+  .footer h3 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .logoImgPhone {
+    display: none;
+  }
+}

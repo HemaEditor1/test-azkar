@@ -1,0 +1,887 @@
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Zain", sans-serif;
+  scroll-behavior: smooth;
+  direction: rtl;
+  overflow-x: hidden;
+}
+
+#Quran {
+  font-family: "Amiri", serif;
+}
+
+.srcZekr {
+  font-family: "Zain", sans-serif;
+}
+
+#Quran h3 {
+  font-size: 3vh;
+  margin-top: -2vh;
+}
+
+#Quran h2 {
+  font-size: 4.8vh;
+}
+
+.header {
+  background-image: url(Elements/Background/bk\ -\ h&f.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.linksMoreZekr {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 100px;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.linksMoreZekr a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+  padding: 5px 15px;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.linksMoreZekr a:hover {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  /* border: solid white 2px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.045); */
+}
+
+.header img {
+  width: 30%;
+  margin: 4vh;
+}
+
+.header.night {
+  background-image: url(Elements/Background/bk\ -\ h&f\ -\ night.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  position: relative;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+.text h4 {
+  margin-top: -4vh;
+}
+
+.text h5 {
+  margin-top: 1vh;
+}
+
+/* Buttons */
+
+.btns {
+  margin-bottom: -2vh;
+}
+
+.theSwitshBtnDay {
+  height: 65px;
+  width: 136px;
+  background-size: cover;
+  border: none;
+  border-radius: 5px;
+  background-image: url(Elements/Background/bk\ -\ btn.png);
+  background-repeat: no-repeat;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.theSwitshBtnDay img {
+  width: 90%;
+}
+
+.theSwitshBtnDay.deactive {
+  opacity: 0.8;
+}
+
+.theSwitshBtnDay:hover {
+  opacity: 0.9;
+}
+
+.theSwitshBtnNight {
+  height: 65px;
+  width: 136px;
+  background-size: cover;
+  border: none;
+  border-radius: 5px;
+  background-image: url(Elements/Background/bk\ -\ btn\ -\ night.png);
+  background-repeat: no-repeat;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.theSwitshBtnNight img {
+  width: 90%;
+}
+
+.theSwitshBtnNight.deactive {
+  opacity: 0.8;
+}
+
+.theSwitshBtnNight:hover {
+  opacity: 0.9;
+}
+
+/* Zekr Box */
+.box {
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 80vh;
+  margin: 10vh;
+  background-image: url(Elements/Background/bk\ -\ box.png);
+  font-size: 1.3rem;
+}
+
+.box h2 {
+  margin: 2vh;
+}
+
+.box.night {
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 80vh;
+  margin: 10vh;
+  background-image: url(Elements/Background/bk\ -\ box\ -\ night.png);
+  font-size: 1.3rem;
+}
+
+.smlNum {
+  background: none;
+  border-radius: 5px;
+  border: solid white 2px;
+  color: white;
+  font-size: 1.9rem;
+  align-items: center;
+  width: 10vw;
+  height: 11vh;
+  transition: 0.2s ease;
+  cursor: pointer;
+  margin-top: 5vh;
+}
+
+.smlNum:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+.smlNum.deactive {
+  background: none;
+  border-radius: 5px;
+  border: solid rgba(255, 255, 255, 0.674) 2px;
+  color: rgba(255, 255, 255, 0.674);
+  font-size: 1.5rem;
+  align-items: center;
+  width: 10vw;
+  height: 11vh;
+  transition: 0.2s ease;
+  cursor: default;
+  margin-top: 5vh;
+}
+
+span {
+  font-size: 3rem;
+}
+
+.zekr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.textBFooter {
+  position: relative;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  margin-bottom: 10vh;
+}
+
+.footer {
+  background-image: url(Elements/Background/bk\ -\ h&f.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer h2 {
+  margin: 0;
+  color: white;
+  margin-top: 3vh;
+}
+
+.footer h3 {
+  margin-top: 0.1vh;
+  margin-bottom: 3vh;
+}
+
+.footer.night {
+  background-image: url(Elements/Background/bk\ -\ h&f\ -\ night.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+}
+
+/* -------------------------------------------- */
+
+.srcZekr {
+  margin-top: 3vh;
+  margin-bottom: -5vh;
+  position: relative;
+}
+
+.infoBtn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  position: absolute; /* لجعل الزر فوق النص */
+  top: 2vh; /* تحديد موقع الزر */
+  right: 50%; /* لجعل الزر في المنتصف أفقيًا */
+  transform: translateX(50%); /* لضبط التمركز بدقة */
+  z-index: 2; /* تأكيد أن الزر يظهر فوق النص */
+}
+
+.infoBtn.deactive {
+  top: 2vh;
+  opacity: 0;
+  transform: rotateY(90deg);
+  transition: 0.5s ease;
+}
+
+.sourceHidden {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+  transform: rotateY(90deg);
+  z-index: 1; /* جعل النص أسفل الزر */
+  margin-top: 1vh;
+  font-weight: 400;
+  letter-spacing: 0.7px;
+}
+
+.sourceHidden.active {
+  opacity: 1;
+  transform: rotateY(0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.doneBtn.deactive {
+  opacity: 0;
+  transition: 0.4s ease;
+  /* transform: rotateY(90deg); */
+  transform: translateY(-50px);
+}
+
+.doneBtn {
+  opacity: 1;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: white;
+  margin-top: 0.5rem;
+  transition: 0.4s ease;
+  /* transform: rotateY(0deg); */
+  transform: translateY(0px);
+}
+
+/* -------------------------------------------------------------------------------- menu */
+
+.menuElements {
+  display: flex;
+  position: absolute;
+  top: 18vh;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  transform: translateX(200%);
+  transition: 0.3s ease;
+}
+
+.menuElements.show {
+  transform: translateX(0);
+}
+
+.infoElements {
+  display: flex;
+  position: absolute;
+  top: 15.5vh;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  transform: translateX(-200%);
+  transition: 0.3s ease;
+  color: #1f584e;
+}
+
+.infoElements h3 {
+  margin-top: 5px;
+}
+
+.infoElements h4 {
+  margin: 5px;
+  font-size: 0.95rem;
+}
+
+.contactWithMe {
+  margin-top: 15px;
+}
+
+.icons a {
+  font-size: 1.4rem;
+  padding: 5px;
+  color: #1f584e;
+  transition: 0.5s ease;
+}
+
+.icons a:hover {
+  color: #3c7f73;
+}
+
+.icons i {
+  transition: 0.2s ease;
+}
+
+.icons i:hover {
+  transform: scale(1.2);
+}
+
+.captionText {
+  margin-bottom: 20px;
+}
+
+.infoImg {
+  margin: 0 auto;
+  margin-top: 20px;
+  overflow: hidden;
+  width: 80px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./Elements/Background/bk\ -\ box.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.infoImg img {
+  width: 100%;
+  height: auto;
+}
+
+.infoElements.show {
+  transform: translateX(0);
+}
+
+.menuElements a {
+  text-decoration: none;
+  font-weight: 800;
+  color: #256358;
+  display: block; /* عرض الروابط كعناصر فردية */
+  padding: 15px;
+  transition: 0.3s ease;
+}
+
+.menuElements.night a {
+  text-decoration: none;
+  font-weight: 800;
+  color: #214e69;
+  display: block; /* عرض الروابط كعناصر فردية */
+  padding: 15px;
+  transition: 0.3s ease;
+}
+
+.menuElements a:hover {
+  background-color: #256358;
+  color: white;
+}
+
+.menuElements.night a:hover {
+  background-color: #214e69;
+  color: white;
+}
+
+/* ------------------- New Header Mobile -------------------- */
+
+.mobHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 19px;
+}
+
+.rightMenu a {
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.leftMenu a {
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menuElementsBtn {
+  display: block;
+}
+
+.menuElementsBtn.close {
+  display: none;
+}
+
+.menuElementsBtnX {
+  display: none;
+}
+
+.menuElementsBtnX.show {
+  display: block;
+  padding: 0 1px;
+}
+
+.infoElementsBtn {
+  display: block;
+}
+
+.infoElementsBtn.close {
+  display: none;
+}
+
+.infoElementsBtnX {
+  display: none;
+}
+
+.infoElementsBtnX.show {
+  display: block;
+  padding: 0 2px;
+}
+
+/* alert */
+
+.shareWebsite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alert {
+  background-color: white;
+  font-size: 1.2rem;
+  height: 50px;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 3px;
+  transform: translateY(-175%);
+  transition: 0.2s ease;
+  gap: 3px;
+  opacity: 1;
+}
+
+.alert.close {
+  transform: translateY(-400%);
+  opacity: 0;
+  border-radius: 5px;
+}
+
+/* -------------------------------------------- */
+
+/* Small Phones */
+@media (max-width: 480px) {
+  /* -------------------------------- */
+
+  .menuElements {
+    opacity: 0;
+  }
+
+  .menuElements.show {
+    opacity: 1;
+  }
+
+  .infoElements {
+    opacity: 0;
+  }
+
+  .infoElements.show {
+    opacity: 1;
+  }
+
+  .linksMoreZekr {
+    display: none;
+  }
+
+  /* .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  } */
+  /* 
+  .header.night {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  } */
+
+  /* ------------------------------------------------- */
+  .header img {
+    height: 7vh;
+    width: auto;
+  }
+
+  .text {
+    position: relative;
+    width: 90%;
+    margin-bottom: 3vh;
+  }
+
+  .text h4 {
+    font-size: 0.9rem;
+    font-weight: 800;
+    margin-bottom: 6vh;
+  }
+
+  .text h5 {
+    font-weight: 700;
+    margin-bottom: 5vh;
+    font-size: 0.66rem;
+  }
+
+  .theSwitshBtnDay {
+    height: 45px;
+    width: 85px;
+  }
+
+  .theSwitshBtnNight {
+    height: 45px;
+    width: 85px;
+  }
+
+  #Quran h3 {
+    font-size: 1.8vh;
+  }
+
+  #Quran h2 {
+    margin-top: -1vh;
+    font-size: 2.8vh;
+  }
+
+  #Quran {
+    margin-top: 4vh;
+  }
+
+  .smlNum {
+    width: 110px;
+    height: 60px;
+    font-size: 1rem;
+  }
+
+  .smlNum.deactive {
+    width: 90px;
+    height: 55px;
+    font-size: 0.7rem;
+  }
+
+  span {
+    font-size: 1.9rem;
+  }
+
+  /* ------------------------------ */
+
+  .srcZekr {
+    margin-top: 3vh;
+    margin-bottom: -16vh;
+    position: relative;
+  }
+
+  .infoBtn {
+    font-size: 1.5rem;
+  }
+
+  .sourceHidden {
+    margin-top: 1vh;
+    font-weight: 400;
+    font-size: 0.7rem;
+    margin: 6vh;
+  }
+
+  .sourceHidden.active {
+    margin-top: 1vh;
+    font-weight: 400;
+    font-size: 0.7rem;
+    margin: 6vh;
+  }
+
+  .doneBtn {
+    font-size: 1rem;
+  }
+
+  /* ------------------------------ */
+
+  .box {
+    height: 600px;
+    width: 330px;
+    justify-content: center;
+    margin: 0;
+    margin-top: 4vh;
+  }
+
+  .Azkar.Night .box {
+    height: 600px;
+    width: 330px;
+    justify-content: center;
+    margin: 0;
+    margin-top: 4vh;
+  }
+
+  .box h2 {
+    font-size: 1.5rem;
+  }
+
+  .textBFooter h4 {
+    font-size: 1rem;
+  }
+
+  .footer h2 {
+    font-size: 1rem;
+  }
+
+  .footer h3 {
+    font-size: 0.8rem;
+  }
+}
+
+/* Tablets */
+
+@media (max-width: 768px) and (min-width: 481px) {
+  /* ------------------------------ */
+
+  .menuElements {
+    opacity: 0;
+  }
+
+  .menuElements.show {
+    opacity: 1;
+  }
+
+  .linksMoreZekr {
+    display: none;
+  }
+  /* 
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  } */
+  /* 
+  .header.night {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  } */
+
+  .srcZekr {
+    margin-top: 3vh;
+    margin-bottom: -12vh;
+    position: relative;
+  }
+
+  .infoBtn {
+    font-size: 1.5rem;
+  }
+
+  .sourceHidden {
+    margin-top: 1vh;
+    font-weight: 400;
+    font-size: 0.7rem;
+    margin: 6vh;
+  }
+
+  .sourceHidden.active {
+    margin-top: 1vh;
+    font-weight: 400;
+    font-size: 0.7rem;
+    margin: 6vh;
+  }
+
+  .doneBtn {
+    font-size: 1rem;
+  }
+
+  /* ------------------------------ */
+  .header img {
+    height: 9vh;
+    width: auto;
+  }
+
+  .text {
+    position: relative;
+    width: 80%;
+    margin-bottom: 3vh;
+  }
+
+  .text h4 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 6vh;
+  }
+
+  .text h5 {
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .theSwitshBtnDay {
+    height: 50px;
+    width: 90px;
+  }
+
+  .theSwitshBtnNight {
+    height: 50px;
+    width: 90px;
+  }
+
+  #Quran h3 {
+    font-size: 2vh;
+  }
+
+  #Quran h2 {
+    font-size: 3vh;
+  }
+
+  #Quran {
+    margin-top: 4vh;
+  }
+
+  .smlNum {
+    width: 16vw;
+    height: 8vh;
+    font-size: 1.3rem;
+  }
+
+  .smlNum.deactive {
+    width: 15vw;
+    height: 8vh;
+    font-size: 0.9rem;
+  }
+
+  span {
+    font-size: 2rem;
+  }
+
+  .box h2 {
+    font-size: 1.6rem;
+  }
+
+  .footer h2 {
+    font-size: 1.3rem;
+  }
+
+  .footer h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .rightMenu {
+    display: none;
+  }
+
+  .leftMenu {
+    display: none;
+  }
+}
