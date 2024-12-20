@@ -294,6 +294,8 @@ let infoElementsBtn = document.querySelector(".infoElementsBtn");
 let infoElementsBtnX = document.querySelector(".infoElementsBtnX");
 let infoElements = document.querySelector(".infoElements");
 
+let blackMate = document.querySelector(".blackMate");
+
 menuElementsBtn.addEventListener("click", () => {
   // Close Info Menu
   if (infoElements.classList.contains("show")) {
@@ -306,6 +308,8 @@ menuElementsBtn.addEventListener("click", () => {
   menuElements.classList.add("show");
   menuElementsBtn.classList.add("close");
   menuElementsBtnX.classList.add("show");
+
+  blackMate.classList.remove("close");
 });
 
 // Close Elements Menu By X Btn
@@ -313,6 +317,8 @@ menuElementsBtnX.addEventListener("click", () => {
   menuElements.classList.remove("show");
   menuElementsBtn.classList.remove("close");
   menuElementsBtnX.classList.remove("show");
+
+  blackMate.classList.add("close");
 });
 
 infoElementsBtn.addEventListener("click", () => {
@@ -327,6 +333,8 @@ infoElementsBtn.addEventListener("click", () => {
   infoElements.classList.add("show");
   infoElementsBtn.classList.add("close");
   infoElementsBtnX.classList.add("show");
+
+  blackMate.classList.remove("close");
 });
 
 // Close Info Menu By X Btn
@@ -334,6 +342,8 @@ infoElementsBtnX.addEventListener("click", () => {
   infoElements.classList.remove("show");
   infoElementsBtn.classList.remove("close");
   infoElementsBtnX.classList.remove("show");
+
+  blackMate.classList.add("close");
 });
 
 // Close Info Menu If Click Out This Menu
@@ -346,6 +356,8 @@ window.addEventListener("click", (e) => {
       infoElements.classList.remove("show");
       infoElementsBtn.classList.remove("close");
       infoElementsBtnX.classList.remove("show");
+
+      blackMate.classList.add("close");
     }
   }
 });
@@ -360,6 +372,8 @@ window.addEventListener("click", (el) => {
       menuElements.classList.remove("show");
       menuElementsBtn.classList.remove("close");
       menuElementsBtnX.classList.remove("show");
+
+      blackMate.classList.add("close");
     }
   }
 });

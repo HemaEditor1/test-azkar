@@ -9,7 +9,6 @@ body {
   font-family: "Zain", sans-serif;
   scroll-behavior: smooth;
   direction: rtl;
-  overflow-x: hidden;
 }
 
 #Quran {
@@ -40,6 +39,25 @@ body {
   flex-direction: column;
   text-align: center;
   justify-content: center;
+  z-index: 5;
+}
+
+.blackMate {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 3;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+.blackMate.close {
+  opacity: 0;
+  z-index: -1;
 }
 
 .linksMoreZekr {
@@ -361,38 +379,41 @@ span {
 .menuElements {
   display: flex;
   position: absolute;
-  top: 18vh;
+  top: 100%;
   left: 0;
   width: 100%;
   background-color: white;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2); */
   z-index: 3;
-  transform: translateX(200%);
+  clip-path: inset(0 0 0 100%);
   transition: 0.3s ease;
 }
 
 .menuElements.show {
-  transform: translateX(0);
+  clip-path: inset(0 0 0 0);
 }
 
 .infoElements {
   display: flex;
   position: absolute;
-  top: 15.5vh;
+  top: 100%;
   left: 0;
   width: 100%;
   background-color: white;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
   z-index: 3;
-  transform: translateX(-200%);
+  clip-path: inset(0 100% 0 0);
   transition: 0.3s ease;
   color: #1f584e;
+}
+
+.infoElements.show {
+  clip-path: inset(0 0 0 0);
 }
 
 .infoElements h3 {
@@ -435,8 +456,8 @@ span {
   margin: 0 auto;
   margin-top: 20px;
   overflow: hidden;
-  width: 80px;
-  height: 58px;
+  width: 110px;
+  height: 78px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -449,10 +470,7 @@ span {
 .infoImg img {
   width: 100%;
   height: auto;
-}
-
-.infoElements.show {
-  transform: translateX(0);
+  padding: 50px;
 }
 
 .menuElements a {
@@ -490,25 +508,27 @@ span {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 19px;
+  padding: 0 25px;
 }
 
 .rightMenu a {
   color: white;
-  font-size: 1rem;
   margin: 0;
   padding: 0;
 }
 
 .leftMenu a {
   color: white;
-  font-size: 1rem;
   margin: 0;
   padding: 0;
 }
 
 .menuElementsBtn {
   display: block;
+}
+
+.header i {
+  font-size: 1.3rem;
 }
 
 .menuElementsBtn.close {
@@ -521,7 +541,7 @@ span {
 
 .menuElementsBtnX.show {
   display: block;
-  padding: 0 1px;
+  padding: 0 1.5px;
 }
 
 .infoElementsBtn {
@@ -538,7 +558,7 @@ span {
 
 .infoElementsBtnX.show {
   display: block;
-  padding: 0 2px;
+  padding: 0 2.5px;
 }
 
 /* alert */
@@ -561,14 +581,14 @@ span {
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 3px;
-  transform: translateY(-175%);
+  /* transform: translateY(-175%); */
   transition: 0.2s ease;
   gap: 3px;
   opacity: 1;
 }
 
 .alert.close {
-  transform: translateY(-400%);
+  /* transform: translateY(-400%); */
   opacity: 0;
   border-radius: 5px;
 }
@@ -614,21 +634,22 @@ span {
   } */
 
   /* ------------------------------------------------- */
+
   .header img {
-    height: 7vh;
+    height: 6vh;
     width: auto;
   }
 
   .text {
     position: relative;
     width: 90%;
-    margin-bottom: 3vh;
+    margin: 2vh 0px;
   }
 
   .text h4 {
     font-size: 0.9rem;
     font-weight: 800;
-    margin-bottom: 6vh;
+    margin-bottom: 4vh;
   }
 
   .text h5 {
@@ -692,14 +713,16 @@ span {
     margin-top: 1vh;
     font-weight: 400;
     font-size: 0.7rem;
-    margin: 6vh;
+    margin: 0 6vh;
+    margin-bottom: 6vh;
   }
 
   .sourceHidden.active {
     margin-top: 1vh;
     font-weight: 400;
     font-size: 0.7rem;
-    margin: 6vh;
+    margin: 0 6vh;
+    margin-bottom: 6vh;
   }
 
   .doneBtn {
@@ -744,6 +767,10 @@ span {
 /* Tablets */
 
 @media (max-width: 768px) and (min-width: 481px) {
+  body {
+    overflow-x: hidden;
+  }
+
   /* ------------------------------ */
 
   .menuElements {
