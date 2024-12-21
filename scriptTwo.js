@@ -20,7 +20,16 @@ for (let g = 0; g < infoBtn.length; g++) {
   };
 }
 
-// -------------------------------------------------------------
+// ------------------------------------------------------------- FUNCTIONS
+
+function toggleMenuElements() {
+  menuElements.classList.toggle("show");
+  menuBtn.classList.toggle("close");
+  menuBtnX.classList.toggle("show");
+  blackMate.classList.toggle("close");
+}
+
+// ------------------------------------------------------------- FUNCTIONS
 
 // MENU
 const menuElementsBtn = document.querySelector(".menu a"); // زر القائمة
@@ -31,19 +40,11 @@ let menuBtnX = document.querySelector(".menuX");
 let blackMate = document.querySelector(".blackMate");
 
 menuElementsBtn.addEventListener("click", () => {
-  menuElements.classList.toggle("show"); // إضافة/إزالة كلاس "show"
-  menuBtn.classList.toggle("close");
-  menuBtnX.classList.toggle("show");
-
-  blackMate.classList.toggle("close");
+  toggleMenuElements();
 });
 
 menuBtnX.addEventListener("click", () => {
-  menuElements.classList.toggle("show"); // إضافة/إزالة كلاس "show"
-  menuBtn.classList.toggle("close");
-  menuBtnX.classList.toggle("show");
-
-  blackMate.classList.toggle("close");
+  toggleMenuElements();
 });
 
 // -------------------------------------------------------------
@@ -52,11 +53,18 @@ menuBtnX.addEventListener("click", () => {
 window.addEventListener("click", (e) => {
   if (menuElements.classList.contains("show")) {
     if (!menuElements.contains(e.target) && !menuBtn.contains(e.target)) {
-      menuElements.classList.toggle("show");
-      menuBtn.classList.toggle("close");
-      menuBtnX.classList.toggle("show");
+      toggleMenuElements();
+    }
+  }
+});
 
-      blackMate.classList.toggle("close");
+// -------------------------------------------------------------
+
+// Close Menu Elements If Scorll
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= 400) {
+    if (menuElements.classList.contains("show")) {
+      toggleMenuElements();
     }
   }
 });

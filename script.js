@@ -282,11 +282,52 @@ for (let g = 0; g < infoBtn.length; g++) {
   };
 }
 
-// ------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------- FUNCTIONS
+// Menu Functions
+
+// Open Menu Elements
+function openMenuElements() {
+  menuElements.classList.add("show");
+  menuElementsBtn.classList.add("close");
+  menuElementsBtnX.classList.add("show");
+}
+
+// Close Menu Elements
+function closeMenuElements() {
+  menuElements.classList.remove("show");
+  menuElementsBtn.classList.remove("close");
+  menuElementsBtnX.classList.remove("show");
+}
+
+// Open Info Elements
+function openInfoMenu() {
+  infoElements.classList.add("show");
+  infoElementsBtn.classList.add("close");
+  infoElementsBtnX.classList.add("show");
+}
+
+// Close Info Elements
+function closeInfoMenu() {
+  infoElements.classList.remove("show");
+  infoElementsBtn.classList.remove("close");
+  infoElementsBtnX.classList.remove("show");
+}
+
+// Add Black Mate
+function addBlack() {
+  blackMate.classList.remove("close");
+}
+
+// Close Black Mate
+function closeBlack() {
+  blackMate.classList.add("close");
+}
+
+// -------------------------------------------------------------------------- FUNCTIONS
 
 // Right Menu
 let menuElementsBtn = document.querySelector(".menuElementsBtn"); // زر القائمة
-const menuElements = document.querySelector(".menuElements"); // القائمة
+let menuElements = document.querySelector(".menuElements"); // القائمة
 let menuElementsBtnX = document.querySelector(".menuElementsBtnX");
 
 // Left Menu
@@ -299,51 +340,35 @@ let blackMate = document.querySelector(".blackMate");
 menuElementsBtn.addEventListener("click", () => {
   // Close Info Menu
   if (infoElements.classList.contains("show")) {
-    infoElements.classList.remove("show");
-    infoElementsBtn.classList.remove("close");
-    infoElementsBtnX.classList.remove("show");
+    closeInfoMenu();
   }
 
   // Open Elements Menu
-  menuElements.classList.add("show");
-  menuElementsBtn.classList.add("close");
-  menuElementsBtnX.classList.add("show");
-
-  blackMate.classList.remove("close");
+  openMenuElements();
+  addBlack();
 });
 
 // Close Elements Menu By X Btn
 menuElementsBtnX.addEventListener("click", () => {
-  menuElements.classList.remove("show");
-  menuElementsBtn.classList.remove("close");
-  menuElementsBtnX.classList.remove("show");
-
-  blackMate.classList.add("close");
+  closeMenuElements();
+  closeBlack();
 });
 
 infoElementsBtn.addEventListener("click", () => {
   // Close Elements Menu
   if (menuElements.classList.contains("show")) {
-    menuElements.classList.remove("show");
-    menuElementsBtn.classList.remove("close");
-    menuElementsBtnX.classList.remove("show");
+    closeMenuElements();
   }
 
   // Open Info Menu
-  infoElements.classList.add("show");
-  infoElementsBtn.classList.add("close");
-  infoElementsBtnX.classList.add("show");
-
-  blackMate.classList.remove("close");
+  openInfoMenu();
+  addBlack();
 });
 
 // Close Info Menu By X Btn
 infoElementsBtnX.addEventListener("click", () => {
-  infoElements.classList.remove("show");
-  infoElementsBtn.classList.remove("close");
-  infoElementsBtnX.classList.remove("show");
-
-  blackMate.classList.add("close");
+  closeInfoMenu();
+  closeBlack();
 });
 
 // Close Info Menu If Click Out This Menu
@@ -353,11 +378,8 @@ window.addEventListener("click", (e) => {
       !infoElements.contains(e.target) &&
       !infoElementsBtn.contains(e.target)
     ) {
-      infoElements.classList.remove("show");
-      infoElementsBtn.classList.remove("close");
-      infoElementsBtnX.classList.remove("show");
-
-      blackMate.classList.add("close");
+      closeInfoMenu();
+      closeBlack();
     }
   }
 });
@@ -369,11 +391,25 @@ window.addEventListener("click", (el) => {
       !menuElements.contains(el.target) &&
       !menuElementsBtn.contains(el.target)
     ) {
-      menuElements.classList.remove("show");
-      menuElementsBtn.classList.remove("close");
-      menuElementsBtnX.classList.remove("show");
+      closeMenuElements();
+      closeBlack();
+    }
+  }
+});
 
-      blackMate.classList.add("close");
+// Close If Scroll
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= 400) {
+    if (menuElements.classList.contains("show")) {
+      closeMenuElements();
+      closeBlack();
+    }
+  }
+
+  if (window.scrollY >= 500) {
+    if (infoElements.classList.contains("show")) {
+      closeInfoMenu();
+      closeBlack();
     }
   }
 });
