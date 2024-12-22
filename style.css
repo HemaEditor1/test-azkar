@@ -21,7 +21,6 @@ body {
 
 #Quran h3 {
   font-size: 3vh;
-  margin-top: -2vh;
 }
 
 #Quran h2 {
@@ -81,9 +80,6 @@ body {
 .linksMoreZekr a:hover {
   text-decoration: underline;
   text-underline-offset: 10px;
-  /* border: solid white 2px;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.045); */
 }
 
 .header img {
@@ -122,7 +118,6 @@ body {
 }
 
 /* Buttons */
-
 .btns {
   margin-bottom: -2vh;
 }
@@ -190,10 +185,6 @@ body {
   font-size: 1.3rem;
 }
 
-.box h2 {
-  margin: 2vh;
-}
-
 .box.night {
   color: white;
   border-radius: 5px;
@@ -219,7 +210,6 @@ body {
   height: 11vh;
   transition: 0.2s ease;
   cursor: pointer;
-  margin-top: 5vh;
 }
 
 .smlNum:hover {
@@ -237,7 +227,6 @@ body {
   height: 11vh;
   transition: 0.2s ease;
   cursor: default;
-  margin-top: 5vh;
 }
 
 span {
@@ -249,6 +238,7 @@ span {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 2vh 3vh;
 }
 
 .textBFooter {
@@ -620,20 +610,6 @@ span {
     display: none;
   }
 
-  /* .header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  } */
-  /* 
-  .header.night {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  } */
-
   /* ------------------------------------------------- */
 
   .header img {
@@ -671,15 +647,11 @@ span {
 
   #Quran h3 {
     font-size: 1.8vh;
+    margin-bottom: 1vh;
   }
 
   #Quran h2 {
-    margin-top: -1vh;
     font-size: 2.8vh;
-  }
-
-  #Quran {
-    margin-top: 4vh;
   }
 
   .smlNum {
@@ -701,9 +673,8 @@ span {
   /* ------------------------------ */
 
   .srcZekr {
-    margin-top: 3vh;
-    margin-bottom: -16vh;
     position: relative;
+    margin: 0 4vh;
   }
 
   .infoBtn {
@@ -711,19 +682,15 @@ span {
   }
 
   .sourceHidden {
-    margin-top: 1vh;
     font-weight: 400;
     font-size: 0.7rem;
-    margin: 0 6vh;
-    margin-bottom: 6vh;
+    margin-top: 2vh;
   }
 
   .sourceHidden.active {
-    margin-top: 1vh;
     font-weight: 400;
     font-size: 0.7rem;
-    margin: 0 6vh;
-    margin-bottom: 6vh;
+    margin-top: 2vh;
   }
 
   .doneBtn {
@@ -768,10 +735,6 @@ span {
 /* Tablets */
 
 @media (max-width: 768px) and (min-width: 481px) {
-  body {
-    overflow-x: hidden;
-  }
-
   /* ------------------------------ */
 
   .menuElements {
@@ -785,25 +748,10 @@ span {
   .linksMoreZekr {
     display: none;
   }
-  /* 
-  .header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  } */
-  /* 
-  .header.night {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  } */
 
   .srcZekr {
-    margin-top: 3vh;
-    margin-bottom: -12vh;
     position: relative;
+    margin: 0 4vh;
   }
 
   .infoBtn {
@@ -811,17 +759,15 @@ span {
   }
 
   .sourceHidden {
-    margin-top: 1vh;
     font-weight: 400;
     font-size: 0.7rem;
-    margin: 6vh;
+    margin-top: 2vh;
   }
 
   .sourceHidden.active {
-    margin-top: 1vh;
     font-weight: 400;
     font-size: 0.7rem;
-    margin: 6vh;
+    margin-top: 2vh;
   }
 
   .doneBtn {
@@ -830,14 +776,14 @@ span {
 
   /* ------------------------------ */
   .header img {
-    height: 9vh;
+    height: 8vh;
     width: auto;
   }
 
   .text {
     position: relative;
     width: 80%;
-    margin-bottom: 3vh;
+    margin: 2vh 0px;
   }
 
   .text h4 {
@@ -847,7 +793,6 @@ span {
   }
 
   .text h5 {
-    margin-top: 2vh;
     margin-bottom: 5vh;
     font-weight: 700;
     font-size: 0.9rem;
@@ -865,31 +810,34 @@ span {
 
   #Quran h3 {
     font-size: 2vh;
+    margin-bottom: 1vh;
   }
 
   #Quran h2 {
     font-size: 3vh;
   }
 
-  #Quran {
-    margin-top: 4vh;
-  }
-
   .smlNum {
-    width: 16vw;
-    height: 8vh;
+    width: 110px;
+    height: 60px;
     font-size: 1.3rem;
   }
 
   .smlNum.deactive {
-    width: 15vw;
-    height: 8vh;
+    width: 90px;
+    height: 55px;
     font-size: 0.9rem;
   }
 
   span {
     font-size: 2rem;
   }
+
+  .btns {
+    margin-bottom: -55px;
+  }
+
+  /* ------------------------------ */
 
   .box h2 {
     font-size: 1.6rem;
