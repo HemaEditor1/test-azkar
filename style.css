@@ -114,12 +114,13 @@ body {
 }
 
 .text h5 {
-  margin-top: 1vh;
+  margin-top: 3vh;
 }
 
 /* Buttons */
 .btns {
-  margin-bottom: -2vh;
+  margin-bottom: -8vh;
+  margin-top: 5vh;
 }
 
 .theSwitshBtnDay {
@@ -643,6 +644,11 @@ span {
   .theSwitshBtnNight {
     height: 45px;
     width: 85px;
+  }
+
+  .btns {
+    margin-bottom: -3vh;
+    margin-top: 0vh;
   }
 
   #Quran h3 {
