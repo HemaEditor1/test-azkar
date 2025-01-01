@@ -68,3 +68,12 @@ window.addEventListener("scroll", () => {
     }
   }
 });
+
+// ----------------------------------------------------------
+
+// Write Year On Footer
+let myFooter = document.querySelector(".footer");
+let yearParagraph = document.createElement("h3");
+
+yearParagraph.textContent = `Copyright © ${new Date().getFullYear()}`;
+myFooter.appendChild(yearParagraph);

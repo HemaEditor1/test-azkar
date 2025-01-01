@@ -21,6 +21,51 @@ body {
   z-index: 4;
 }
 
+.textBFooter {
+  position: relative;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  margin-bottom: 10vh;
+  text-align: center;
+}
+
+.footer {
+  background-image: url(Elements/Background/bk\ -\ h&f.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer h2 {
+  margin: 0;
+  color: white;
+  margin-top: 3vh;
+}
+
+.footer h3 {
+  margin-top: 0.1vh;
+  margin-bottom: 3vh;
+}
+
 .blackMate {
   display: flex;
   position: fixed;
