@@ -343,6 +343,12 @@ body {
     display: none;
   }
 
+  #Quran {
+    font-family: "Amiri", serif;
+    font-size: 1.1rem;
+    margin: 3vh;
+  }
+
   .phoneHeader {
     display: block;
   }
@@ -399,7 +405,7 @@ body {
   }
 
   .secName h3 {
-    margin-top: -5vh;
+    margin-top: -4vh;
     margin-bottom: 1vh;
     font-weight: 500;
   }
@@ -461,11 +467,11 @@ body {
   }
 
   .zekr h4 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .zekr h2 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin-top: -0.5vh;
   }
 
@@ -592,7 +598,7 @@ body {
   }
 
   .secName h3 {
-    margin-top: -5vh;
+    margin-top: -3vh;
     margin-bottom: 1vh;
     font-weight: 500;
   }
@@ -605,14 +611,17 @@ body {
     margin-bottom: 8vh;
   }
 
-  .zekr h1 {
-    margin-top: -2vh;
-    font-size: 3rem;
-  }
-
   .zekr h2 {
     font-size: 2rem;
     margin-top: -0.5vh;
+  }
+
+  .zekr h4 {
+    font-size: 0.8rem;
+  }
+
+  .zekr h2 {
+    font-size: 1.6rem;
   }
 
   .textBFooter h4 {
